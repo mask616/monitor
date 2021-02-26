@@ -1,0 +1,20 @@
+{
+  "properties" : [
+    {
+      "name":"spring.cloud.admin.notify.dingtalk.apiUrl",
+      "type": "java.lang.String",
+      "description": "钉钉机器人Webhook地址."
+    },
+    {
+      "name":"spring.cloud.admin.notify.dingtalk.groupConfigurations",
+      "type": "com.tceasy.monitor.notifier.GroupConfiguration",
+      "description": "钉钉通知分组配置信息."
+    },
+    {
+      "name":"spring.cloud.admin.notify.dingtalk.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否启用钉钉通知.",
+      "defaultValue": true
+    }
+  ]
+}
