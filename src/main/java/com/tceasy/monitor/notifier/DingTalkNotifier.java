@@ -46,7 +46,7 @@ public class DingTalkNotifier  extends AbstractStatusChangeNotifier {
     /* Notifier switch*/
     private boolean enable = true;
 
-    @Value("${spring.active.profiles}")
+    @Value("${spring.profiles.active}")
     private String profiles;
 
     private final Map<String, GroupConfiguration> groupConfigurations = new LinkedHashMap();
@@ -130,4 +130,32 @@ public class DingTalkNotifier  extends AbstractStatusChangeNotifier {
         return message.getValue(context, String.class);
     }
 
+
+    public String getApiUrl() {
+        return apiUrl;
+    }
+
+    public void setApiUrl(String apiUrl) {
+        this.apiUrl = apiUrl;
+    }
+
+    public boolean isEnable() {
+        return enable;
+    }
+
+    public void setEnable(boolean enable) {
+        this.enable = enable;
+    }
+
+    public String getProfiles() {
+        return profiles;
+    }
+
+    public void setProfiles(String profiles) {
+        this.profiles = profiles;
+    }
+
+    public Map<String, GroupConfiguration> getGroupConfigurations() {
+        return groupConfigurations;
+    }
 }
