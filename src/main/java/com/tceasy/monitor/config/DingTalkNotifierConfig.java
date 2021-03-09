@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class DingTalkNotifierConfig {
 
     @Configuration
-    @ConditionalOnProperty(prefix = "spring.cloud.admin.notify.dingtalk", name = "enable", havingValue = "true")
+    @ConditionalOnProperty(prefix = "spring.cloud.admin.notify.dingtalk", name = "api-url")
     @AutoConfigureBefore({AdminServerNotifierAutoConfiguration.NotifierTriggerConfiguration.class, AdminServerNotifierAutoConfiguration.CompositeNotifierConfiguration.class})
     public static class DingTalkNotifierConfiguration {
 
